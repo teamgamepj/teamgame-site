@@ -1,0 +1,8 @@
+body{margin:0;font-family:sans-serif;color:#fff;background:#111}
+#bg-overlay{position:fixed;inset:0;z-index:-1;filter:brightness(0.7);}
+
+#bg-overlay {
+  background-image: url("images/pozadina.png");
+  background-size: cover;
+  background-position: center;
+}

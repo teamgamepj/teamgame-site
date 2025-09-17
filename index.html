@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TEAMGAME — Dva zida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bg-overlay"></div>
+  <header class="header">
+    <div class="brand">
+      <h1 id="site-title">TEAMGAME</h1>
+      <span id="site-slogan">Pokret igre</span>
+    </div>
+    <div class="controls">
+      <input id="bg-url" placeholder="URL pozadinske slike">
+      <input id="title-input" placeholder="Naslov (TEAMGAME)">
+      <input id="slogan-input" placeholder="Slogan (Pokret igre)">
+      <button id="apply-btn">Primeni</button>
+    </div>
+  </header>
+  <main class="container">
+    <section class="wall">
+      <div class="wall-head">
+        <h2>PRIČA O FUDBALU</h2>
+        <p class="sub">postovi, skice, video linkovi</p>
+      </div>
+      <div class="composer" data-key="fudbal">
+        <input class="c-title" placeholder="Naslov (opciono)">
+        <input class="c-media" placeholder="URL slike (opciono)">
+        <label class="pin"><input type="checkbox" class="c-pin"> Pin na vrh</label>
+        <button class="c-post">Objavi</button>
+        <textarea class="c-content" placeholder="Tekst posta..."></textarea>
+      </div>
+      <div class="feed pinned" id="fudbal-pinned"></div>
+      <div class="feed" id="fudbal-regular"></div>
+    </section>
+    <section class="wall">
+      <div class="wall-head">
+        <h2>PRIČA O KULTURI</h2>
+        <p class="sub">eseji, citati, vizuali</p>
+      </div>
+      <div class="composer" data-key="kultura">
+        <input class="c-title" placeholder="Naslov (opciono)">
+        <input class="c-media" placeholder="URL slike (opciono)">
+        <label class="pin"><input type="checkbox" class="c-pin"> Pin na vrh</label>
+        <button class="c-post">Objavi</button>
+        <textarea class="c-content" placeholder="Tekst posta..."></textarea>
+      </div>
+      <div class="feed pinned" id="kultura-pinned"></div>
+      <div class="feed" id="kultura-regular"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    © <span id="year"></span> TEAMGAME — prototip dva zida (pin na vrh, URL pozadina, localStorage).
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
