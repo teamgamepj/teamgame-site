@@ -1,8 +1,72 @@
-body{margin:0;font-family:sans-serif;color:#fff;background:#111}
-#bg-overlay{position:fixed;inset:0;z-index:-1;filter:brightness(0.7);}
-
-#bg-overlay {
-  background-image: url("images/pozadina.png");
-  background-size: cover;
-  background-position: center;
+/* TEAMGAME — dve FB-like kolone sa hero postom i CTA */
+:root{
+  --glass: rgba(0,0,0,.45);
+  --border: rgba(255,255,255,.18);
+  --muted: rgba(255,255,255,.7);
+  --shadow: 0 12px 30px rgba(0,0,0,.35);
+  --radius: 16px;
 }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;color:#fff;background:#0b1020}
+#bg-overlay{position:fixed;inset:0;background-image:url('images/pozadina.png');background-size:cover;background-position:center;filter:brightness(.72);z-index:-1}
+
+.header{position:sticky;top:0;z-index:10;backdrop-filter: blur(8px);background:rgba(0,0,0,.42);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.brand h1{margin:0;font-size:24px;letter-spacing:.8px}
+.brand .slogan{margin-left:10px;color:var(--muted);font-size:13px}
+.nav a{color:#fff;text-decoration:none;margin-left:10px;border:1px solid var(--border);padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.08)}
+
+.container{max-width:1200px;margin:18px auto;padding:0 12px}
+
+.cta-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.cta-row button{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:#fff;color:#000;font-weight:800;cursor:pointer}
+.cta-row .secondary{background:rgba(255,255,255,.9)}
+
+.walls{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:900px){.walls{grid-template-columns:1fr 1fr}}
+
+.wall{background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px}
+.wall-head h2{margin:0 0 8px 0}
+.sub{color:var(--muted);font-size:12px;margin:0 0 12px}
+
+.hero-post{background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
+.hero-post header h3{margin:0 0 4px 0;font-size:18px}
+.hero-post .deck{margin:0 0 10px 0;color:var(--muted);font-size:13px}
+.hero-post .btn{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:#fff;color:#000;font-weight:800;cursor:pointer}
+.hero-ctas{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.hero-ctas button{padding:8px 12px;border-radius:10px;border:1px solid var(--border);background:#fff;color:#000;font-weight:800;cursor:pointer}
+.hero-ctas .secondary{background:rgba(255,255,255,.9)}
+.video{margin-top:12px}
+.ratio{position:relative;width:100%;padding-bottom:56.25%}
+.ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.composer{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:16px;padding:12px;margin-bottom:12px}
+.composer input,.composer textarea{width:100%;margin:6px 0;padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,.35);color:#fff}
+.composer .pin{display:inline-flex;align-items:center;gap:6px;margin-right:8px;font-size:13px}
+.composer .c-post{float:right;padding:8px 10px;border-radius:10px;background:#fff;color:#000;font-weight:700;border:0;cursor:pointer}
+
+.feed{display:grid;gap:10px}
+.card{background:rgba(0,0,0,.45);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.card .top{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;gap:8px;background:rgba(255,255,255,.04)}
+.badge{font-size:10px;text-transform:uppercase;letter-spacing:.6px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.12)}
+.time{color:var(--muted);font-size:12px}
+.actions button{margin-left:6px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,.12);color:#fff;border:1px solid var(--border);cursor:pointer}
+.card h3{margin:8px 14px 0;font-size:16px}
+.card p{margin:8px 14px 12px;white-space:pre-wrap;line-height:1.45}
+.card img{width:100%;max-height:360px;object-fit:cover;display:block;border-top:1px solid var(--border)}
+
+.kontakt h2{margin:0 0 8px 0}
+.footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 0}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px}
+.modal[hidden]{display:none}
+.modal-card{background:#0f152b;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);max-width:640px;width:100%;padding:16px;max-height:80vh;overflow:auto}
+.modal-card.modal-long{max-width:900px}
+.modal-card h3{margin:0 0 8px 0}
+.modal-card p{margin:0 0 10px 0;color:#e5e7eb}
+.modal-card .form input,.modal-card .form textarea{width:100%;margin:6px 0;padding:10px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,.35);color:#fff}
+.modal-card .row-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+.modal-card .primary{background:#fff;color:#000;font-weight:800;border:0;border-radius:10px;padding:8px 12px;cursor:pointer}
+.bank{background:rgba(255,255,255,.06);border:1px solid var(--border);padding:12px;border-radius:12px;white-space:pre-wrap}
+.long-body h4{margin:14px 0 8px 0}
+.long-body p{line-height:1.6}
