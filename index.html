@@ -3,138 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeamGamePJ</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
-    .columns {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-    }
-    .column {
-      width: 48%;
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-    }
-    .post {
-      margin-bottom: 20px;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fafafa;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #007BFF;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background: #0056b3;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background: rgba(0,0,0,0.7);
-    }
-    .modal-content {
-      background: #fff;
-      margin: 5% auto;
-      padding: 20px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 800px;
-      max-height: 80vh;
-      overflow-y: auto;
-    }
-    .close {
-      float: right;
-      font-size: 28px;
-      cursor: pointer;
-    }
-  </style>
+  <title>TeamGame</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>TeamGamePJ</h1>
-  </header>
-
-  <div class="columns">
-    <!-- Leva kolona: PRIČA O FUDBALU -->
-    <div class="column">
+  <div id="bg-overlay"></div>
+  <div class="container">
+    <div class="column" id="left-col">
       <h2>PRIČA O FUDBALU</h2>
       <div class="post">
-        <h3>1 - PRIKLJUČI SE TIMU BESPLATNO</h3>
-        <p><b>Takmičarski tim:</b> teamgamepj@gmail.com<br>
-        <b>Rekreativni tim:</b> teamgamepj@gmail.com</p>
-        <h3>2 - POKLON TEKST</h3>
-        <a href="#" class="btn" onclick="document.getElementById('modal').style.display='block'">Ubrzanje</a>
-        <h3>3 - POKLON VIDEO</h3>
-        <p><a href="https://youtu.be/6KM8N1xIMA0" target="_blank">▶ Pogledaj video na YouTube</a></p>
+        <h3>POKLON TEKST "UBRZANJE"</h3>
+        <p>
+          <button class="read-more" onclick="openModal()">PROČITAJ VIŠE</button>
+        </p>
       </div>
     </div>
-
-    <!-- Desna kolona: PRIČA O KULTURI -->
-    <div class="column">
+    <div class="column" id="right-col">
       <h2>PRIČA O KULTURI</h2>
       <div class="post">
-        <p>Uskoro...</p>
+        <h3>Uskoro...</h3>
       </div>
     </div>
   </div>
 
-  <!-- Modal za tekst Ubrzanje -->
+  <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+      <span class="close" onclick="closeModal()">&times;</span>
       <h2>Ubrzanje: sport, kultura i logika pogrešnog tempa</h2>
-      <p><b>Uvod</b><br>
-      Nakon pojave interneta, a posebno kada su se svi uključili u njega, internet je postao generator autoriteta... (ovde ide ceo tvoj tekst Ubrzanje koji si poslao, ubacen kompletno). </p>
-      <p>---</p>
-      <p><b>1 – Košarka</b><br>„Više koševa po utakmici“ postalo je pravac razvoja igre... itd.</p>
-      <p>---</p>
-      <p><b>2 – Fudbal</b><br>Danas se brži fudbal vidi kao bolji fudbal... itd.</p>
-      <p>---</p>
-      <p><b>3 – MMA</b><br>U MMA sportu svi hoće da vide udarače, dok „dosadni“ rvači ostvaruju najviše pobeda... itd.</p>
-      <p>---</p>
-      <p><b>4 – Kultura</b><br>Lakonski karakter veštijih rečenica i narativa ponire... itd.</p>
-      <p>---</p>
-      <p><b>Zaključak</b><br>U svim ovim primerima vidimo istu matricu: ubrzanje ne znači bolju igru, već siromašniju igru...</p>
+      <p>
+      Nakon pojave interneta, a posebno kada su se svi uključili u njega, internet je postao generator autoriteta u smislu: „to radiš zbog idola sa interneta, a odluku doživljavaš kao svoju“.
+      Prvi put u istoriji imamo autoritete – decu pred decom. Autoritete koji slabo vladaju jezikom i značenjem pred decom – i uporedo narcisoidnu publiku, koja ne može da pronađe sreću u „šta je najbolje po mene/nas“ u duelu sa „šta liči na mene“ (Appel et al., 2022).
+
+      Upravo taj paradoks – da se kriterijumi izvrsnosti formiraju kroz ono što „liči“, a ne kroz ono što daje rezultat – osnova je procesa ubrzanja.
+
+      (ceo tvoj tekst ubačen ovde bi nastavio u punoj verziji...)
+      </p>
     </div>
   </div>
 
-  <script>
-    window.onclick = function(event) {
-      let modal = document.getElementById('modal');
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
