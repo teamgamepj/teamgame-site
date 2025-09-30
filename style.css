@@ -124,3 +124,19 @@ iframe { border-radius: 8px; width: 100%; }
 }
 .sep{opacity:.6}
 #year{opacity:.9}
+
+
+/* BOOST read-more button */
+button.read-more.big{
+  display:inline-block;
+  font-size:16px;
+  letter-spacing:.5px;
+  padding:12px 18px;
+  border:2px solid var(--accent);
+  background:transparent;
+  color: var(--accent);
+}
+button.read-more.big:hover{
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
