@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      btn.parentElement.parentElement.style.display = 'none';
+      btn.closest('.modal').style.display = 'none';
     });
   });
 

@@ -1,41 +1,59 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background: #0b1020;
+  color: #fff;
+}
+#bg-overlay{
+  position: fixed;
+  inset: 0;
+  background-image: url('images/pozadina.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: -1;
 }
 .container {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .column {
   width: 48%;
-  background: white;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(6px);
 }
-.post {
-  margin-bottom: 20px;
-}
+h2 { margin-top: 0; }
+.post { margin-bottom: 20px; }
 .hero-post {
-  border: 2px solid #0077cc;
-  padding: 10px;
-  border-radius: 8px;
-  background: #eef7ff;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
 }
 button.read-more {
   margin-top: 10px;
-  padding: 8px 12px;
-  background: #0077cc;
-  color: white;
+  padding: 10px 14px;
+  background: #fff;
+  color: #000;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-weight: 800;
   cursor: pointer;
 }
-iframe {
-  margin-top: 10px;
-}
+.video-wrap { margin-top: 10px; }
+iframe { border-radius: 8px; }
+.yt-link { font-size: 14px; color: rgba(255,255,255,0.8); }
+.yt-link a { color: #fff; text-decoration: underline; }
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -44,16 +62,19 @@ iframe {
   background: rgba(0,0,0,0.6);
 }
 .modal-content {
-  background: white;
-  margin: 10% auto;
+  background: #0f152b;
+  margin: 6% auto;
   padding: 20px;
-  width: 80%;
-  max-height: 70%;
+  width: min(900px, 92%);
+  max-height: 80%;
   overflow-y: auto;
-  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: #e5e7eb;
 }
 .close {
   float: right;
   font-size: 28px;
   cursor: pointer;
+  color: #fff;
 }
