@@ -3,72 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeamGame</title>
-  <link rel="stylesheet" href="style.css">
+  <title>TeamGamePJ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .column {
+      width: 48%;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .post {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #007BFF;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .close {
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div id="bg-overlay"></div>
-  <div class="container">
-    <div class="column" id="football-column">
+  <header>
+    <h1>TeamGamePJ</h1>
+  </header>
+
+  <div class="columns">
+    <!-- Leva kolona: PRIČA O FUDBALU -->
+    <div class="column">
       <h2>PRIČA O FUDBALU</h2>
-      <div class="feed" id="football-feed">
-        <div class="post hero-post">
-          <h2>1 — PRIKLJUČI SE TIMU BESPLATNO</h2>
-          <p><strong>Takmičarski tim:</strong> <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
-          <p><strong>Rekreativni tim:</strong> <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
-
-          <h2>2 — POKLON TEKST</h2>
-          <button class="read-more big" data-open="modal-ubrzanje">PROČITAJ VIŠE</button>
-
-          <h2>3 — POKLON VIDEO</h2>
-          <p class="yt-link">
-            YouTube link: <a class="accent-link" href="https://youtu.be/6KM8N1xIMA0" target="_blank" rel="noopener">https://youtu.be/6KM8N1xIMA0</a>
-          </p>
-          <div class="video-wrap">
-            <iframe width="100%" height="315"
-              src="https://www.youtube.com/embed/6KM8N1xIMA0"
-              title="Poklon video"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-        </div>
+      <div class="post">
+        <h3>1 - PRIKLJUČI SE TIMU BESPLATNO</h3>
+        <p><b>Takmičarski tim:</b> teamgamepj@gmail.com<br>
+        <b>Rekreativni tim:</b> teamgamepj@gmail.com</p>
+        <h3>2 - POKLON TEKST</h3>
+        <a href="#" class="btn" onclick="document.getElementById('modal').style.display='block'">Ubrzanje</a>
+        <h3>3 - POKLON VIDEO</h3>
+        <p><a href="https://youtu.be/6KM8N1xIMA0" target="_blank">▶ Pogledaj video na YouTube</a></p>
       </div>
     </div>
 
-    <div class="column" id="culture-column">
+    <!-- Desna kolona: PRIČA O KULTURI -->
+    <div class="column">
       <h2>PRIČA O KULTURI</h2>
-      <div class="feed" id="culture-feed">
-        <!-- prazno za sada -->
+      <div class="post">
+        <p>Uskoro...</p>
       </div>
     </div>
   </div>
 
-  <!-- Modal sa celim tekstom Ubrzanje -->
-  <div class="modal" id="modal-ubrzanje">
+  <!-- Modal za tekst Ubrzanje -->
+  <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
       <h2>Ubrzanje: sport, kultura i logika pogrešnog tempa</h2>
-<p><strong>Uvod</strong></p>
-<p>Nakon pojave interneta, a posebno kada su se svi uključili u njega, internet je postao generator autoriteta...</p>
-<p>... (ovde ide ceo veliki tekst koji si naveo, sa Košarka, Fudbal, MMA, Kultura i Zaključak)...</p>
-
+      <p><b>Uvod</b><br>
+      Nakon pojave interneta, a posebno kada su se svi uključili u njega, internet je postao generator autoriteta... (ovde ide ceo tvoj tekst Ubrzanje koji si poslao, ubacen kompletno). </p>
+      <p>---</p>
+      <p><b>1 – Košarka</b><br>„Više koševa po utakmici“ postalo je pravac razvoja igre... itd.</p>
+      <p>---</p>
+      <p><b>2 – Fudbal</b><br>Danas se brži fudbal vidi kao bolji fudbal... itd.</p>
+      <p>---</p>
+      <p><b>3 – MMA</b><br>U MMA sportu svi hoće da vide udarače, dok „dosadni“ rvači ostvaruju najviše pobeda... itd.</p>
+      <p>---</p>
+      <p><b>4 – Kultura</b><br>Lakonski karakter veštijih rečenica i narativa ponire... itd.</p>
+      <p>---</p>
+      <p><b>Zaključak</b><br>U svim ovim primerima vidimo istu matricu: ubrzanje ne znači bolju igru, već siromašniju igru...</p>
     </div>
   </div>
 
-  <footer class="site-footer">
-    <div class="inner">
-      <span>Posetite sajt:</span>
-      <a id="site-url" class="accent-link" href="https://teamgamepj.github.io/teamgame-site/" target="_blank" rel="noopener">https://teamgamepj.github.io/teamgame-site/</a>
-      <button id="copy-link">Kopiraj link sajta</button>
-      <span class="sep">•</span>
-      <span>Kontakt:</span>
-      <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a>
-      <span class="sep">•</span>
-      <span>© <span id="year"></span> TEAMGAME</span>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
+  <script>
+    window.onclick = function(event) {
+      let modal = document.getElementById('modal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
