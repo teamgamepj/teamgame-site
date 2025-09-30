@@ -7,40 +7,102 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- JEL TU - početak stranice -->
   <div id="bg-overlay"></div>
   <div class="container">
-    <div class="column" id="left-col">
+    <div class="column" id="football-column">
       <h2>PRIČA O FUDBALU</h2>
-      <div class="post">
-        <h3>POKLON TEKST "UBRZANJE"</h3>
-        <p>
-          <button class="read-more" onclick="openModal()">PROČITAJ VIŠE</button>
-        </p>
+      <div class="feed" id="football-feed">
+        <!-- JEL TU - prvi hero post (priključi se timu / poklon tekst / poklon video) -->
+        <div class="post hero-post">
+          <h2>1 — PRIKLJUČI SE TIMU BESPLATNO</h2>
+          <p><strong>Takmičarski tim:</strong> <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
+          <p><strong>Rekreativni tim:</strong> <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
+
+          <h2>2 — POKLON TEKST</h2>
+          <button class="read-more big" data-open="modal-ubrzanje">PROČITAJ VIŠE</button>
+
+          <h2>3 — POKLON VIDEO</h2>
+          <!-- PRVO LINK, PA VIDEO -->
+          <p class="yt-link">
+            YouTube link: <a class="accent-link" href="https://youtu.be/6KM8N1xIMA0" target="_blank" rel="noopener">https://youtu.be/6KM8N1xIMA0</a>
+          </p>
+          <div class="video-wrap">
+            <iframe width="100%" height="315"
+              src="https://www.youtube.com/embed/6KM8N1xIMA0"
+              title="Poklon video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="column" id="right-col">
+
+    <div class="column" id="culture-column">
       <h2>PRIČA O KULTURI</h2>
-      <div class="post">
-        <h3>Uskoro...</h3>
+      <div class="feed" id="culture-feed">
+        <!-- prazno za sada -->
       </div>
     </div>
   </div>
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
+  <!-- Modal za Ubrzanje -->
+  <div class="modal" id="modal-ubrzanje">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Ubrzanje: sport, kultura i logika pogrešnog tempa</h2>
-      <p>
-      Nakon pojave interneta, a posebno kada su se svi uključili u njega, internet je postao generator autoriteta u smislu: „to radiš zbog idola sa interneta, a odluku doživljavaš kao svoju“.
-      Prvi put u istoriji imamo autoritete – decu pred decom. Autoritete koji slabo vladaju jezikom i značenjem pred decom – i uporedo narcisoidnu publiku, koja ne može da pronađe sreću u „šta je najbolje po mene/nas“ u duelu sa „šta liči na mene“ (Appel et al., 2022).
+      <span class="close">&times;</span>
+<h2>Ubrzanje: sport, kultura i logika pogrešnog tempa</h2>
 
-      Upravo taj paradoks – da se kriterijumi izvrsnosti formiraju kroz ono što „liči“, a ne kroz ono što daje rezultat – osnova je procesa ubrzanja.
+<h3>Uvod</h3>
+<p>Nakon pojave interneta, a posebno kada su se svi uključili u njega, internet je postao generator autoriteta u smislu: „to radiš zbog idola sa internetа, a odluku doživljavaš kao svoju“. Prvi put u istoriji imamo autoritete – decu pred decom. Autoritete koji slabo vladaju jezikom i značenjem pred decom – i uporedo narcisoidnu publiku, koja ne može da pronađe sreću u „šta je najbolje po mene/nas“ u duelu sa „šta liči na mene“ (Appel et al., 2022).</p>
+<p>Upravo taj paradoks – da se kriterijumi izvrsnosti formiraju kroz ono što „liči“, a ne kroz ono što daje rezultat – osnova je procesa ubrzanja.</p>
+<p>U sledećim primerima, „ubrzanje“ predstavlja i odlazak od veštine ka onome: „Šta većina želi da vidi.“ Sva četiri procesa postaju „brži“ u poslednjih 15 godina, dok je zanimljivo to da su od Drugog svetskog rata pa do pomenutog „ubrzanja“, fudbal i košarka, kao i kultura, kroz period od pola veka izgledali isto i postojali na dinamici: brže kada treba – sporije kada treba.</p>
 
-      (ceo tvoj tekst ubačen ovde bi nastavio u punoj verziji...)
-      </p>
-    </div>
+<h3>1 – Košarka</h3>
+<p>„Više koševa po utakmici“ postalo je pravac razvoja igre i vidi se kao znak bolje igre, dok se „čovek najviše raduje fudbalskom golu jer se najteže daje“. Sa više koševa, oduzeta je vrednost jednom košu.</p>
+<p>Ako istog protivnika pobedite sa 60 datih koševa, tada su tih 60 koševa većeg kvaliteta i značaja nego u slučaju gde vam je za pobedu potrebno 120. Brža igra vidi se kao znak bolje igre, dok – matematički – ekipa koja ideološki završava napade u 15 sekundi oduzima sebi deo strategije koji bi imala da koristi svih 24 sekunde (Zhang, 2025).</p>
+<p>Današnja košarka zasniva se na preteranoj upotrebi trenerskih matrica u napadu i zahteva previše trčanja, što pravi štetu na upotrebnoj vrednosti igrača – možda sa ciljem da se postigne mnogo koševa, što se vidi kao slika bolje igre. „Mada, kako možeš da daš 120 poena a da izgubiš“ – citat iz humorističke serije – otkriva sliku gde je ono što želimo da vidimo kreiralo ono što daje lošiji rezultat.</p>
+<p>O greškama u današnjoj košarci može se dugo pisati. Po mom mišljenju ni Larry Bird ni Jordan danas ne bi postizali 50 poena – ne bi mogli ni da se uključe u današnji sistem. Oni bi usporili i „udavili“ današnje manijakalce – i to kroz seriju od deset i više duela. Ili bi, paradoksalno, bili dovedeni na nivo Karija i Duranta, da mogu da izgube od Finske, samo da bi „tatičin naum“ bio sproveden u delo (Zając et al., 2023).</p>
+<p><em>Dopuna:</em> Savremena istraživanja potvrđuju ovu intuiciju. Povećan broj poseda i šutiranih trojki podigao je „spektakl“, ali ne i vrednost jednog poena. Statističke analize pokazuju da tempo sam po sebi ne povećava šanse za pobedu – važna je fleksibilnost: nekad završiti napad u 5 sekundi, a nekad koristiti svih 24 (Zhang, 2025). To znači da ubrzanje nije samo estetska promena, već i strukturalno osiromašenje igre.</p>
+
+<h3>2 – Fudbal</h3>
+<p>Danas se brži fudbal vidi kao bolji fudbal, dok je jedini način da se Radnički iz Nove Pazove suprotstavi elitnom fudbalskom timu usporavanje igre i odustanak od visokog presinga „preko mere“. Da li bi Grčka mogla da osvoji EURO 2004. sa visokim presingom i bržim tempom? (UEFA, 2004).</p>
+<p>U fudbalu se kao osnovna vrednost danas vidi brzina, dok je fudbal igra u kojoj ćeš najlakše dati gol iz dva pasa po visini u najsporijem tempu. Analize pokazuju da najveći broj golova zapravo nastaje iz kratkih sekvenci – dva do tri dodira, a ne iz beskrajnog tempa (Moura et al., 2014).</p>
+<p>Priprema u najsporijem tempu i pravovremeni „blickrig“ – bilo da je reč o kontranapadu kao osnovi prošlog razumnijeg fudbala, ili tika-taka napada i Milan 2005 napada kao dva od mnogo primera taktičko-tehnički najefikasnijih ekipa. Kako znamo da su najefikasnije? Sa najmanje uloga do najboljeg rezultata… dok mi biramo da tih uslova u napadu više uopšte nema. Isti jezik prenosa lopte koristili su Bekembauer, Gulit, Pirlo – dok danas upadljivo izostaju kvaliteti koje su ti igrači donosili i predstavljali.</p>
+<p><em>Dopuna:</em> Upravo ta „sporija priprema – brži završetak“ logika potvrđena je i u analitičkim modelima poseda (Rein &amp; Memmert, 2016). Učinkoviti golovi dolaze iz preciznih, kratkih lanaca dodavanja, dok „forsirani pressing i ubrzanje“ češće rezultuju gubitkom poseda. U tom smislu, ubrzanje fudbala nije prirodni razvoj, već kulturna ideologija brzine.</p>
+
+<h3>3 – MMA</h3>
+<p>U MMA sportu svi hoće da vide udarače, dok „dosadni“ rvači ostvaruju najviše pobeda.</p>
+<p>Slike onoga što većina vidi kao kvalitet i onoga što „najbolje radi“ – ne podudaraju se. Najbolji primer su mečevi gde grappleri „udave“ strikere kroz seriju kontrola i obaranja – što obično izgleda manje atraktivno, ali donosi siguran rezultat (Tjønndal, 2022).</p>
+<p><em>Dopuna:</em> Podaci iz UFC-a pokazuju jasnu korelaciju između uspešnih obaranja i verovatnoće pobede. Rvanje i kontrola su najpouzdaniji prediktori ishoda borbi, iako su vizuelno „manje atraktivni“ od nokauta. To potvrđuje obrazac: ono što publika traži kao „atrakciju“ i ono što uistinu donosi pobedu – nisu isto.</p>
+
+<h3>4 – Kultura</h3>
+<p>Lakonski karakter veštijih rečenica i narativa ponire, biva razvodnjen našim zahtevom za višesatnim i svakodnevnim izlaganjem idola (odatle priča o današnjem vremenu kao vremenu novog mnogoboštva). Idol odlazi od toga da ispriča ono u čemu je najveštiji – ka tome da mora da popuni tri sata podkasta.</p>
+<p>Dok se zastave morala viore svuda, zastava sa poučnom pričom o Narcisu leži na zemlji – izgažena u nevidljivom imaginarijumu vrednosti koje pratimo. U kulturi problem je, kao što rekoh – teško će budući čovek moći da uživa u knjizi pored hiljadu slatkiša (Vedechkina &amp; Borgonovi, 2021). Dakle, prethodna rečenica jeste problem koji će biti sve prisutniji.</p>
+<p><em>Dopuna:</em> Studije pažnje pokazuju da svakodnevna izloženost digitalnim stimulansima menja prag dosade i toleranciju za duže forme (Willingham, 2020). Umesto dubinskog iskustva čitanja ili razgovora, publika preferira kratke dopaminske „kickove“ (Appel et al., 2022). To je kulturni ekvivalent sportskog ubrzanja – vrednost jedne rečenice se gubi kada se zahteva hiljadu njih na dnevnom nivou.</p>
+
+<h3>Zaključak</h3>
+<p>U svim ovim primerima vidimo istu matricu: ubrzanje ne znači bolju igru, već siromašniju igru.</p>
+<p>U košarci – više koševa, ali manje vrednosti jednog koša.</p>
+<p>U fudbalu – brži presing, ali manje efikasnosti nego u dva smirena pasa.</p>
+<p>U MMA – publika želi nokaut, ali pobednik je rvač.</p>
+<p>U kulturi – tražimo hiljadu rečenica, a ne čujemo ni jednu.</p>
+<p>Ubrzanje je logika koja zamagljuje razliku između atrakcije i rezultata. Zato pitanje nije „koliko brzo“ već „kada ubrzati, a kada usporiti“. Tek tu se vraća prirodni ritam igre i života.</p>
+</div>
   </div>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>Posetite sajt:</span>
+      <a id="site-url" class="accent-link" href="https://teamgamepj.github.io/teamgame-site/" target="_blank" rel="noopener">https://teamgamepj.github.io/teamgame-site/</a>
+      <button id="copy-link">Kopiraj link sajta</button>
+      <span class="sep">•</span>
+      <span>Kontakt:</span>
+      <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a>
+      <span class="sep">•</span>
+      <span>© <span id="year"></span> TEAMGAME</span>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
