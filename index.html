@@ -16,13 +16,17 @@
         <!-- JEL TU - prvi hero post (priključi se timu / poklon tekst / poklon video) -->
         <div class="post hero-post">
           <h2>1 — PRIKLJUČI SE TIMU BESPLATNO</h2>
-          <p><strong>Takmičarski tim:</strong> <a href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
-          <p><strong>Rekreativni tim:</strong> <a href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
+          <p><strong>Takmičarski tim:</strong> <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
+          <p><strong>Rekreativni tim:</strong> <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a></p>
 
           <h2>2 — POKLON TEKST</h2>
           <button class="read-more" data-open="modal-ubrzanje">Pročitaj više</button>
 
           <h2>3 — POKLON VIDEO</h2>
+          <!-- PRVO LINK, PA VIDEO -->
+          <p class="yt-link">
+            YouTube link: <a class="accent-link" href="https://youtu.be/6KM8N1xIMA0" target="_blank" rel="noopener">https://youtu.be/6KM8N1xIMA0</a>
+          </p>
           <div class="video-wrap">
             <iframe width="100%" height="315"
               src="https://www.youtube.com/embed/6KM8N1xIMA0"
@@ -30,9 +34,6 @@
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
-            <p class="yt-link">
-              YouTube link: <a href="https://youtu.be/6KM8N1xIMA0" target="_blank" rel="noopener">https://youtu.be/6KM8N1xIMA0</a>
-            </p>
           </div>
         </div>
       </div>
@@ -56,6 +57,19 @@
       <!-- Ostatak tvog velikog teksta "Ubrzanje" možeš ovde nalepiti -->
     </div>
   </div>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span>Posetite sajt:</span>
+      <a id="site-url" class="accent-link" href="https://teamgamepj.github.io/teamgame-site/" target="_blank" rel="noopener">https://teamgamepj.github.io/teamgame-site/</a>
+      <button id="copy-link">Kopiraj link sajta</button>
+      <span class="sep">•</span>
+      <span>Kontakt:</span>
+      <a class="pill-link" href="mailto:teamgamepj@gmail.com">teamgamepj@gmail.com</a>
+      <span class="sep">•</span>
+      <span>© <span id="year"></span> TEAMGAME</span>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
